@@ -56,6 +56,7 @@ class ProductCard extends StatelessWidget {
                       icon:  Icon(Icons.add_circle, color: Colors.blue),
                       onPressed: () {},
                     ),
+
                   ],
                 ),
               ],

@@ -1,22 +1,22 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import '../constants/api_endpoints.dart';
 import '../models/product_model.dart';
 
 class ProductProvider with ChangeNotifier {
-  List<Product> _products = [];
+  List<ProductModel> _products = [];
   bool _isLoading = true;
   final Dio _dio = Dio();
 
-  List<Product> get products => _products;
-
+  List<ProductModel> get products => _products;
   bool get isLoading => _isLoading;
 
-  Future<void> fetchProducts() async {
+  Future<void> getProducts() async {
     try {
-      final response = await _dio.get('https://fakestoreapi.com/products');
+      final response = await _dio.get(PRODUCTS );
       if (response.statusCode == 200) {
         _products = (response.data as List)
-            .map((json) => Product.fromJson(json))
+            .map((json) => ProductModel.fromJson(json))
             .toList();
       }
     } catch (e) {

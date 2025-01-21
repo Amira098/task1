@@ -4,7 +4,9 @@ import 'package:hexcolor/hexcolor.dart' as hex;
 
 
 class AppColors {
+
   static final Color _PRIMARY_COLOR = Color(0xFFAE832D);            ///AE832D
+  static final Color _BLUE_COLOR = Color(0xFF01579B);            ///AE832D
   static final Color _DARK_GOLD_COLOR = Color(0xFFAE832D);          ///AE832D
   static final Color _LIGHT_GOLD_COLOR = Color(0xFFE2CA7E);         ///E2CA7E
   static final Color _MORE_LIGHT_GOLD_COLOR = Color(0xFFE1C59D);    ///E1C59D
@@ -80,6 +82,7 @@ class AppColors {
   static Color get SPANISH_RED => _SPANISH_RED;
 
   static Color get PRIMARY_COLOR => _PRIMARY_COLOR;
+ static Color get BLUE_COLOR => _BLUE_COLOR;
 
   static Color get DARK_GOLD_COLOR => _DARK_GOLD_COLOR;
   static Color get SAMY_GR_COLOR => _SAMY_GR_COLOR;

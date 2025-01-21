@@ -56,7 +56,7 @@ class ProductCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 6),
                 Text(
                   '${product.description}',
                   maxLines: 2,
@@ -65,14 +65,14 @@ class ProductCard extends StatelessWidget {
                       fontSize: AppSizes.BODY_TEXT3_SIZE,
                       color: AppColors.BLACK_COLOR_TR48),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 6),
                 Text(
                   'EGP ${product.price.toStringAsFixed(2)}',
                   style: TextStyle(
                       color: AppColors.BLUE_COLOR,
                       fontFamily: AppFontFamily.EXTRA_BOLD),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 6),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -80,7 +80,7 @@ class ProductCard extends StatelessWidget {
                       children: [
                         Text(" Review (${product.rating.toString()})"),
                         Padding(
-                          padding: EdgeInsets.only(left: 5),
+                          padding: EdgeInsets.only(left: 4),
                           child: Icon(Icons.star,
                               color: AppColors.YELLOW_COLOR, size: 18),
                         ),

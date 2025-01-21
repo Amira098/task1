@@ -19,10 +19,12 @@ class ProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Stack(children: [
+            child: Stack(
+                children: [
               ClipRRect(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(14)),
                 child: Image.network(
+
                   product.image,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -38,7 +40,7 @@ class ProductCard extends StatelessWidget {
                   child: Icon(
                     Icons.favorite_border,
                     color: AppColors.BLUE_COLOR,
-                    size: 30,
+                    size: 28,
                   ),
                 ),
               ),
@@ -46,7 +48,7 @@ class ProductCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(6),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -56,7 +58,7 @@ class ProductCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 6),
+                SizedBox(height: 4),
                 Text(
                   '${product.description}',
                   maxLines: 2,
@@ -65,14 +67,14 @@ class ProductCard extends StatelessWidget {
                       fontSize: AppSizes.BODY_TEXT3_SIZE,
                       color: AppColors.BLACK_COLOR_TR48),
                 ),
-                SizedBox(height: 6),
+                SizedBox(height: 4),
                 Text(
                   'EGP ${product.price.toStringAsFixed(2)}',
                   style: TextStyle(
                       color: AppColors.BLUE_COLOR,
                       fontFamily: AppFontFamily.EXTRA_BOLD),
                 ),
-                SizedBox(height: 6),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
